@@ -1,0 +1,54 @@
+{
+  "name": "new",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/react-transition-group": "^4.4.0",
+    "autoprefixer": "^9.8.5",
+    "autoprefixer-stylus": "^1.0.0",
+    "concurrently": "^5.2.0",
+    "firebase": "^7.15.3",
+    "now": "^19.1.2",
+    "npm-watch": "^0.6.0",
+    "re-base": "^4.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
+    "remove-node-modules": "^1.7.6",
+    "serve": "^11.3.2",
+    "stylus": "^0.54.7"
+  },
+  "scripts": {
+    "dev": "BROWSER='firefox' react-scripts start",
+    "start": "serve --single ./build",
+    "watch": "concurrently --names \"webpack,stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "broccoli": "^3.4.2",
+    "broccoli-rollup": "^4.1.1"
+  }
+}
